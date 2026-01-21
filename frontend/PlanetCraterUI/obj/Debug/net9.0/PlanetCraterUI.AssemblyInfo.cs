@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanetCraterUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b250fde0cf57701d2d646920dcf4591eda0d71a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c75e8a2957dd212b3885c4ea52e921899d3facfb")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanetCraterUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanetCraterUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

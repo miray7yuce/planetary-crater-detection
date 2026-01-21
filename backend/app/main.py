@@ -1,3 +1,4 @@
+from email.mime import image
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import cv2
@@ -12,13 +13,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5277",  # Blazor frontend
-    ],
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 @app.post("/detect", response_model=DetectionResponse)
@@ -27,7 +27,14 @@ async def detect(file: UploadFile = File(...)):
     npimg = np.frombuffer(content, np.uint8)
     image = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 
+    if image is None:
+        return DetectionResponse(
+            success=False,
+            message="Invalid image file."
+        )                   
+        
     planet = detect_planet(image)
+    
     if planet is None:
         return DetectionResponse(
             success=False,

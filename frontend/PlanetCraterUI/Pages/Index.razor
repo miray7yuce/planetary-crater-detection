@@ -1,9 +1,14 @@
 @page "/"
 @page "/index"
 
+<h3>Planet Crater Detection</h3>
+
 <InputFile OnChange="Upload" />
 
-<p>@Message</p>
+@if (!string.IsNullOrEmpty(Message))
+{
+    <p style="color:red; margin-top:10px;">@Message</p>
+}
 
 @if (ImageResult != null)
 {
@@ -12,12 +17,16 @@
 }
 
 @code {
+
     string? ImageResult;
     string? Message;
     double Coverage;
 
     async Task Upload(InputFileChangeEventArgs e)
     {
+        Message = null;
+        ImageResult = null;
+
         var file = e.File;
 
         var content = new MultipartFormDataContent();
@@ -30,27 +39,48 @@
         try
         {
             var client = new HttpClient();
+
             var response = await client.PostAsync(
                 "http://localhost:8000/detect",
                 content
             );
 
-            var json = await response.Content.ReadFromJsonAsync<dynamic>();
-
-            if (json.success == true)
+            if (!response.IsSuccessStatusCode)
             {
-                ImageResult = $"data:image/png;base64,{json.image_base64}";
-                Coverage = json.coverage;
-                Message = null;
+                Message = $"Backend error: {response.StatusCode}";
+                return;
+            }
+
+            var result = await response.Content
+                .ReadFromJsonAsync<DetectionResponse>();
+
+            if (result is null)
+            {
+                Message = "Empty response from server.";
+                return;
+            }
+
+            if (result.success)
+            {
+                ImageResult = $"data:image/png;base64,{result.image_base64}";
+                Coverage = result.coverage;
             }
             else
             {
-                Message = json.message;
+                Message = result.message ?? "Detection failed.";
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Message = "An error occurred while processing the image.";
         }
+    }
+
+    class DetectionResponse
+    {
+        public bool success { get; set; }
+        public double coverage { get; set; }
+        public string? image_base64 { get; set; }
+        public string? message { get; set; }
     }
 }
