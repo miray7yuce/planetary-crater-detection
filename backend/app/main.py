@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 import cv2
 import numpy as np
 import base64
@@ -8,6 +9,17 @@ from app.cv.craters import detect_craters
 from app.models.response import DetectionResponse
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5277",  # Blazor frontend
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.post("/detect", response_model=DetectionResponse)
 async def detect(file: UploadFile = File(...)):

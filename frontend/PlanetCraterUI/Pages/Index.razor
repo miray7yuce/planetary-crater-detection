@@ -1,11 +1,13 @@
 @page "/"
 @page "/index"
-<input type="file" @onchange="Upload" />
+
+<InputFile OnChange="Upload" />
+
 <p>@Message</p>
 
 @if (ImageResult != null)
 {
-    <img src="@ImageResult" style="max-width:100%;" />
+    <img src="@ImageResult" style="max-width:100%; margin-top:20px;" />
     <p><b>Crater Coverage:</b> @Coverage %</p>
 }
 
@@ -14,25 +16,41 @@
     string? Message;
     double Coverage;
 
-    async Task Upload(ChangeEventArgs e)
+    async Task Upload(InputFileChangeEventArgs e)
     {
-        var file = (IBrowserFile)e.Value;
+        var file = e.File;
+
         var content = new MultipartFormDataContent();
-        content.Add(new StreamContent(file.OpenReadStream()), "file", file.Name);
+        content.Add(
+            new StreamContent(file.OpenReadStream(10_000_000)),
+            "file",
+            file.Name
+        );
 
-        var client = new HttpClient();
-        var response = await client.PostAsync("http://localhost:8000/detect", content);
-        var json = await response.Content.ReadFromJsonAsync<dynamic>();
-
-        if (json.success == true)
+        try
         {
-            ImageResult = $"data:image/png;base64,{json.image_base64}";
-            Coverage = json.coverage;
-            Message = null;
+            var client = new HttpClient();
+            var response = await client.PostAsync(
+                "http://localhost:8000/detect",
+                content
+            );
+
+            var json = await response.Content.ReadFromJsonAsync<dynamic>();
+
+            if (json.success == true)
+            {
+                ImageResult = $"data:image/png;base64,{json.image_base64}";
+                Coverage = json.coverage;
+                Message = null;
+            }
+            else
+            {
+                Message = json.message;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            Message = json.message;
+            Message = "An error occurred while processing the image.";
         }
     }
 }

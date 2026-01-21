@@ -1074,10 +1074,10 @@ C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\De
 C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\refint\PlanetCraterUI.dll
 C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\PlanetCraterUI.pdb
 C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\ref\PlanetCraterUI.dll
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.hessrax5ef.wasm
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.m7tw4a0o3n.pdb
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.hessrax5ef.wasm.gz
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.m7tw4a0o3n.pdb.gz
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\pxb9kqzjar-hessrax5ef.gz
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\viyxcnhf3m-m7tw4a0o3n.gz
-C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\a897rocy9m-bwa0htciuy.gz
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.o9sf1e821s.wasm
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.is6t3bixm3.pdb
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.o9sf1e821s.wasm.gz
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\bin\Debug\net9.0\wwwroot\_framework\PlanetCraterUI.is6t3bixm3.pdb.gz
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\pxb9kqzjar-o9sf1e821s.gz
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\viyxcnhf3m-is6t3bixm3.gz
+C:\Users\miray\Desktop\planetary-crater-detection\frontend\PlanetCraterUI\obj\Debug\net9.0\compressed\a897rocy9m-iswuqscuqz.gz
