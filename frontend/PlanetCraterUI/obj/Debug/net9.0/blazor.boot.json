@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PlanetCraterUI",
   "resources": {
-    "hash": "sha256-g6rwoyyikVBI93hqWc4Xu31ts2fGkyWicGZO7bz7kH4=",
+    "hash": "sha256-boqGr4VIh1mCJbUiMOIfl6SmauW5EvsgLX+zsQY6TUY=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.t32damlu4o.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,8 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "PlanetCraterUI.xzpmh9g4mq.wasm": "PlanetCraterUI.wasm",
-      "PlanetCraterUI.bzll2hkvuf.pdb": "PlanetCraterUI.pdb"
+      "PlanetCraterUI.g085t7s4au.wasm": "PlanetCraterUI.wasm",
+      "PlanetCraterUI.iz929rxjl0.pdb": "PlanetCraterUI.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.50iqa8w3ys.js": "sha256-pQdXuxfVeqYHOwd5HUM2ERd7OnXirj9JTF37b6OdTAc="
@@ -412,10 +412,10 @@
       "WindowsBase.361km0836k.wasm": "sha256-FacUCEIJYTnbOWgX/R9QP2QnurqRZwRIkDAH0N9z69s=",
       "mscorlib.qiu3j3msqk.wasm": "sha256-QvztpxTOEw4aMIl7zP3QtsPLNv/IWaK5wq22J4ReGrA=",
       "netstandard.lp03u0xxi4.wasm": "sha256-WVQsxULiAiEbyXLKolS7txnWVT82SsvsuMe4jJ+SqqI=",
-      "PlanetCraterUI.xzpmh9g4mq.wasm": "sha256-413UvfurH+T5f67ipJyuKDtLFmg6Sfw9MudlnV+NwF8="
+      "PlanetCraterUI.g085t7s4au.wasm": "sha256-0DA24RRfX0oNw2lrwaJ8MEroD4S9DeMD1AB9pmmiKx8="
     },
     "pdb": {
-      "PlanetCraterUI.bzll2hkvuf.pdb": "sha256-h4gIf9/eGZIAldV6CJZrZI+N/YYSgnh5gz13Mv8v0UA="
+      "PlanetCraterUI.iz929rxjl0.pdb": "sha256-DmTsbUO2EYwOKCY2/vriCqLiCBWdSFmPbUs544tH2JA="
     }
   },
   "cacheBootResources": true,

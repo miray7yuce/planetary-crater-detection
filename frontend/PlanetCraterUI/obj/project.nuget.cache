@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7XhD7ZdwbiM=",
+  "dgSpecHash": "pS7eKZpcobk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\miray\\Desktop\\planetary-crater-detection\\frontend\\PlanetCraterUI\\PlanetCraterUI.csproj",
+  "projectFilePath": "C:\\Users\\miray\\Desktop\\lunar-crater-detection\\frontend\\PlanetCraterUI\\PlanetCraterUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\miray\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.8\\microsoft.aspnetcore.authorization.9.0.8.nupkg.sha512",
     "C:\\Users\\miray\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.8\\microsoft.aspnetcore.components.9.0.8.nupkg.sha512",
